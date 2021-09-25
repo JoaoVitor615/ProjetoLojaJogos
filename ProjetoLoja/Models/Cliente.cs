@@ -40,6 +40,7 @@ namespace ProjetoLoja.Models
         private DateTime? cliente_datanasc = null;
 
         [Display(Name = "E-mail")]
+        [Required(ErrorMessage = "Este campo é obrigatório!")]
         [RegularExpression(@"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*", ErrorMessage = "Digite um Email válido!")]
         public string Cliente_Email { get; set; }
 

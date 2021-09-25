@@ -1,0 +1,98 @@
+﻿@model ProjetoLoja.Models.Jogo
+@{
+    ViewBag.Title = "Jogo";
+}
+
+<h2>Cadastrar Jogo</h2>
+@using (Html.BeginForm("JogoCadastrado", "Home", FormMethod.Post))
+{
+@Html.ValidationSummary(true)
+                <fieldset>
+                    <legend>Cadastro:</legend>
+
+                    <!--1-->
+                    <div class="editor-label">
+                        @Html.LabelFor(m => m.Jogo_Cod)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(m => m.Jogo_Cod)
+                        @Html.ValidationMessageFor(m => m.Jogo_Cod)
+                    </div>
+
+                    <!--2-->
+                    <div class="editor-label">
+                        @Html.LabelFor(m => m.Jogo_Nome)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(m => m.Jogo_Nome)
+                        @Html.ValidationMessageFor(m => m.Jogo_Nome)
+                    </div>
+
+                    <!--3-->
+                    <div class="editor-label">
+                        @Html.LabelFor(m => m.Jogo_Versao)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(m => m.Jogo_Versao)
+                        @Html.ValidationMessageFor(m => m.Jogo_Versao)
+                    </div>
+
+                    <!--4-->
+                    <div class="editor-label">
+                        @Html.LabelFor(m => m.Jogo_Desenv)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(m => m.Jogo_Desenv)
+                        @Html.ValidationMessageFor(m => m.Jogo_Desenv)
+                    </div>
+
+                    <!--5-->
+                    <div class="editor-label">
+                        @Html.LabelFor(m => m.Jogo_Genero)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(m => m.Jogo_Genero)
+                        @Html.ValidationMessageFor(m => m.Jogo_Genero)
+                    </div>
+
+                    <!--6-->
+                    <div class="editor-label">
+                        @Html.LabelFor(m => m.Jogo_FxEtaria)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(m => m.Jogo_FxEtaria)
+                        @Html.ValidationMessageFor(m => m.Jogo_FxEtaria)
+                    </div>
+
+                    <!--7-->
+                    <div class="editor-label">
+                        @Html.LabelFor(m => m.Jogo_Plataforma)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(m => m.Jogo_Plataforma)
+                        @Html.ValidationMessageFor(m => m.Jogo_Plataforma)
+                    </div>
+
+                    <!--8-->
+                    <div class="editor-label">
+                        @Html.LabelFor(m => m.Jogo_Lanc)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(m => m.Jogo_Lanc)
+                        @Html.ValidationMessageFor(m => m.Jogo_Lanc)
+                    </div>
+
+                    <!--9-->
+                    <div class="editor-label">
+                        @Html.LabelFor(m => m.Jogo_Sinopse)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(m => m.Jogo_Sinopse)
+                        @Html.ValidationMessageFor(m => m.Jogo_Sinopse)
+                    </div>
+
+                    <div>
+                        <br /> <input type="submit" value="Cadastrar" name="btnenviar" />
+                    </div>
+                </fieldset>}
+

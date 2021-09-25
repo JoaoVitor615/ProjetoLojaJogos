@@ -12,8 +12,6 @@ namespace ProjetoLoja.Models
 
         [Display(Name = "Código do Funcionário")]
         [Required(ErrorMessage = "Este campo é obrigatório!")]
-        [Remote("Cod_Func_Uni", "funcionario", ErrorMessage = "Funcionário já cadastrado")]
-       
         public int Func_Cod { get; set; }
 
         [Display(Name = "Nome do Funcionário")]
